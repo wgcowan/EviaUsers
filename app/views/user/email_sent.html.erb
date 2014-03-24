@@ -1,0 +1,24 @@
+<table>
+
+    <% if flash[:notice] -%>
+            <tr>
+                    <th>
+                        <font color="red">Message:</font>
+                    </th>
+                    <td colspan=3>
+                        <font color="red">
+            <%= flash[:notice] %>
+                        </font>
+
+                    </td>
+             </tr>
+     <% end -%>
+    <h2>The notification email has been successfully sent to <%= @user.email %></h2>
+
+  <%= render :partial => 'show' %>
+	<tr>
+	<td><%= button_to 'List', :action => 'list' %></td>
+	<td><%= button_to 'Show', :action => 'show', :id => @user %> </td>
+
+	</tr>
+	</table>

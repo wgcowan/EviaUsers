@@ -1,0 +1,11 @@
+  <%= render :partial => 'show' %>
+<table>
+	<tr>
+<td><%= button_to 'Activate', :action => 'set_activation', :id => @user %></td>
+<td><%= button_to 'Edit', :action => 'edit', :id => @user %> </td>
+<td><%= button_to 'Index', :action => 'index' %></td>
+<td><%= button_to 'De-Activate', :action => 'unset_activation', :id => @user %></td>
+<td><%= button_to 'Send Activation Email', :action => 'email_sent', :id => @user %></td>
+
+</tr>
+</table>

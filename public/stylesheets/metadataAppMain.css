@@ -1,0 +1,20 @@
+#blendLayer {
+	background-color:#dddddd;
+}
+
+#dataDisplay th {
+	width:15%;
+	background-color:#cccccc;
+}
+
+#dataDisplay label:hover {
+  background-color:#f0f0f0;
+}
+
+#dataDisplay td {
+	background-color:#dad6d2;
+}
+
+#fieldDisplay fieldset {
+	background-color:#dad6d2;
+}

@@ -1,0 +1,149 @@
+ <fieldset>
+    <legend>
+        <b>User Information</b>
+    </legend>
+     </fieldset>
+<!--[form:user]-->
+<div
+    id="dataDisplay"
+    style="clear:both; padding-left:2em;">
+   <fieldset>
+	<table>
+
+        <% if flash[:notice] -%>
+                <tr>
+                        <th>
+                            <font color="red">Message:</font>
+                        </th>
+                        <td colspan=3>
+                            <font color="red">
+                <%= flash[:notice] %>
+                            </font>
+
+                        </td>
+                 </tr>
+         <% end -%>
+<tr>
+
+		<th>Username: </th>
+
+	<td>
+		<%= @user.username  %>
+	</td>
+	
+		<th>Fullname: </th>
+		
+		<td><%= @user.fullname  %>
+		</td>
+</tr>
+<tr>
+
+		<th>Administrator: </th>
+
+		<td><%= @user.administrator %>
+		
+	</td>
+
+		<th><b>Locale: </th>
+
+	<td>
+		<%= @user.institution %>
+	</td>
+	<td>
+</tr>
+<tr>
+
+		<th>Email: </th>
+
+	<td>
+		<%= @user.email %>
+	</td>
+
+		<th>Last Login Date: </th>
+
+	<td>
+		<%= @user.last_login_date %>
+	</td>
+	<td>
+</tr>
+<tr>
+
+		<th>Reasons: </th>
+
+	<td>
+		<%= check_box("user","reason_personal_research",{:disabled=>"disabled"}) %> Personal Research<br/>
+		<%= check_box("user","reason_instruction",{:disabled=>"disabled"}) %> Instruction<br/>
+		<%= check_box("user","reason_course_assignment",{:disabled=>"disabled"}) %> Course Assignment
+	</td>
+
+		<th>Student: </th>
+
+	<td>
+		<%= check_box("user","student",{:disabled=>"disabled"}) %>
+	</td>
+</tr>
+<tr>
+
+		<th>Other Reason: </th>
+
+	<td>
+		<%= @user.reason_other%>
+	</td>
+
+		<th>Referral: </th>
+
+	<td>
+		<%= @user.referral_text %>
+	</td>
+</tr>
+<tr>
+
+		<th>Account Activation: </th>
+
+	<td>
+		<%= check_box("user","activation_email_sent",{:disabled=>"disabled"}) %>Activation Email Sent<br/>
+		<%= check_box("user","account_activated",{:disabled=>"disabled"}) %>Account Activated
+		
+	</td>
+
+		<th>Account Password: </th>
+
+	<td>
+		<%= @user.password%>
+	</td>
+</tr>
+<tr>
+
+		<th>Account Activation Key: </th>
+
+	<td colspan=2>
+		<%= if @user.account_activation_key == nil
+				'...'
+		    else
+				@user.account_activation_key[0,20]+' . . . '
+			end%>
+	</td>
+	<td colspan=2/>
+</tr>
+<tr>
+
+		<th>Password Reset Key: </th>
+
+	<td colspan=2>
+		<%= if @user.password_reset_key == nil
+				'...'
+		    else
+				@user.password_reset_key[0,20]+' . . . '
+			end%>
+	</td>
+	<td colspan=2/>
+</tr>
+<tr>
+	<th>SEM Password</th>
+	<td><%=@user.password_temp%></td>
+	</tr>
+</table>
+</fieldset>
+</div>
+<!--[eoform:user]-->
+

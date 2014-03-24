@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Log In</title>
+		<link rel="stylesheet" type="text/css" href="styles/overall.css" />
+		<link rel="stylesheet" type="text/css" href="styles/metadataAppMain.css" />
+
+		<script type="text/javascript" src="js/MetaDataToolbox.js"></script>
+	</head>
+	<body onload="javascript: void( placeBlendLayer() );" onresize="javascript: void( placeBlendLayer() );">
+		<div id="content">
+			<div id="dataDisplay" style="text-align:center">
+				<fieldset>
+					<legend>Log In</legend>
+					<div class="formRow" style="text-align:center;">
+						<p><%= button_to ' IU CAS Authentication ', 'https://cas.iu.edu/cas/login?cassvc=ANY&casurl=http://bl-ldlp-freya:3001/login/validate_login' %></p>
+			        </div>
+			        <div class="formRow" style="text-align:center;">
+						
+			        </div>
+				</fieldset>			
+			</div>
+		</div>	<!-- closes #content -->
+		<div id="breadcrumbs">
+
+			<p>&nbsp;</p>
+		</div> <!-- closes #breadcrumbs -->
+		<div id ="header">
+			<div id="titleGraphic">
+				<img src="images/metadataTitle.jpg" alt="Technical Metadata Collector" width="425" height="100" />
+			</div> <!-- closes #titleGraphic -->
+			<div id="wordmark">
+				<img src="images/metadataWordmark.jpg" alt="EVIA Digital Archive - Ethnomusicological Video for Instruction and Analysis" width="375" height="100" />
+
+			</div> <!-- closes #wordmark -->
+		</div> <!-- closes #header -->
+		<div id="blendLayer">
+			&nbsp;
+		</div>
+</body>
+</html

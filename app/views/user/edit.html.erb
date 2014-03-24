@@ -1,0 +1,12 @@
+
+
+
+  <%= render :partial => 'form' %>
+<table>
+	<tr>
+
+<td><%= button_to 'Activate', :action => 'set_activation', :id => @user %></td>
+<td><%= button_to 'Show', :action => 'show', :id => @user %></td>
+<td><%= button_to 'List', :action => 'list' %></td>
+</tr>
+</table>

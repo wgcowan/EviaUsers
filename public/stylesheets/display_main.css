@@ -1,0 +1,236 @@
+body {
+        margin:0px;
+        padding:0px;
+        background-color:#fff;
+        color:#333333;
+}
+
+h1 {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+        margin:0px;
+        padding:0px;
+color:white;
+}
+
+h2 {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+}
+
+h3 {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+}
+
+h4 {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+}
+
+ul, ol {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+}
+
+li {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+}
+
+p, label {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+        font-size:10pt;
+}
+
+img {
+        display:block;
+}
+
+blockquote {
+        font-family: "Arial Unicode MS", "Lucida Grande", "Lucida Sans Unicode", "Franklin Gothic Book", Helvetica, Geneva, Arial, sans-serif;
+        font-size:10pt;
+        margin-left:10%;
+        margin-right:10%;
+}
+
+#banner {
+        width:auto;
+        height:63px;
+}
+
+#blendLayer {
+  position:absolute;
+  top:102px;
+  left:250px;
+  display:none;
+  background-color:#e07f65;
+  opacity:0.25;
+  filter: alpha(opacity=10);
+}
+
+#citationBox {
+        margin-right:370px;
+        border-bottom:13px solid #003922;
+        height:62px;
+}
+
+#citationBox h1 {
+        position:relative;
+        bottom:-39px;
+        font-size:18px;
+        line-height:18px;
+        padding:0px;
+        padding-left:30px;
+        background-color:#ffffff;
+        color:#bb3122;
+}
+        margin-top:2px;
+
+#citationBox>h1 {
+        padding-top:40px;
+}
+
+#content {
+    position:absolute;
+    top:102px;
+    left:0px;
+    margin-left:250px;
+    margin-right:10px;
+    width:90%;
+    z-index:10; 
+
+}
+#results {
+        position:auto;
+        top:102px;
+        left:0px;
+        width:100%;
+}
+
+#footer {
+        display:none;
+        font-size:9pt;
+        margin-top:2px;
+        border-top:2px solid #e27643;
+}
+
+#leftColumn {
+    position:absolute;
+    top:105px;
+    left:0px;
+    width:250px;
+    z-index:10;
+    opacity:0.85;
+    filter: alpha(opacity=85);
+}
+
+#pageBox>#leftColumn {
+    top:102px;
+}
+
+#navigation {
+        width:230px;
+        margin-right:10px;
+        margin-top:0px;
+        border:1px solid #004a4a;
+        color:#323232;
+        background-color:#001a04;
+}
+
+#navigation h2 {
+        margin-top:2px;
+        margin-left:5px;
+        padding-left:2px;
+        font-family:inherit;
+        font-size:13pt;
+        margin-top:10px;
+        border-left:1px solid #003922;
+        border-bottom:1px solid #11462f;
+        background-color:inherit;
+        color:#eee;
+}
+
+#navigation ul {
+        margin-top:5px;
+        margin-bottom:5px;
+        padding-left:10px;
+        margin-top:2px;
+}
+
+#navigation li {
+        font-size:8pt;
+        font-family:inherit;
+        padding-left:10px;
+        margin-bottom:2px;
+        list-style-type:none;
+  background-color:#f2d8cf;
+}
+
+#navigation a {text-decoration:none;background-color:inherit;color:inherit;}
+#navigation a:link {text-decoration:none;background-color:transparent;color:#bb3122;}
+#navigation a:visited {text-decoration:none;background-color:transparent;color:#bb3122;}
+#navigation a:hover {text-decoration:underline;background-color:transparent;color:#bb3122;}
+#navigation a:active {text-decoration:underline;background-color:#e48c1a;color:#bb3122;}
+
+#pageBox {
+        background-image:url(/images/fadedBackground.jpg);
+        background-repeat: repeat-x;
+        background-attachment:fixed;
+        border-top:2px solid #e27643;
+}
+
+#tabBox {
+        height:25px;
+        background-color:#14515f;
+}
+
+body>#tabBox {
+        height:25px;
+  margin-right:5px;
+        float:right;
+        background-color:#14515f;
+}
+
+#tabBox img {
+        display:block;
+        float:right;
+        margin-right:5px;
+        margin-left:-7px;
+         margin-top:5px;
+}
+
+#tabPane {
+         display:none;
+        height:1px;
+        background-color:#14515f;
+        margin-right:0px;
+/*	border-bottom:2px solid #e27643;
+        border:1px solid #00f;*/
+}
+
+body>#tabPane {
+    display:block;
+    height:25px;
+}
+
+#wordMark {
+        float:center;
+        width:670px;
+        height:50px;
+		left:120px;
+        background-color:#ffffff;
+}
+
+#wordMark img {
+        height:50px;
+        margin-top:7px;
+        padding-right:5px;
+}
+
+#wordMark>img {
+        margin-top:12px;
+}
+
+.ak {
+        text-decoration:underline;
+}
+
+.hotSpot {
+  cursor:pointer;
+}
+

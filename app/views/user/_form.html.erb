@@ -1,0 +1,91 @@
+
+<% case @user.domain
+	when 1
+		domain_sel1 = 'selected'
+		domain_sel2 = ''
+		edit_email1 = @user.username 
+		edit_email2 = '@indiana.edu'
+		edit_email3 = @user.email || edit_email1.concat(edit_email2)
+		edit_locale = @user.locale || 'Indiana University'
+		edit_type = 'hidden'
+	when 0
+		domain_sel1 = ''
+		domain_sel2 = 'selected'
+		edit_email1 = 'Please enter email'
+		edit_email2 = ''
+		edit_email3 = @user.email || edit_email1.concat(edit_email2)
+		edit_locale = @user.locale || ''
+		edit_type = 'password'
+	else
+		domain_sel1 = 'selected'
+		edit_email1 = 'Please enter email'
+		edit_email2 = ''
+		edit_email3 = @user.email || edit_email1.concat(edit_email2)
+		edit_locale = @user.locale || ''
+		edit_type = 'password'
+   end%>
+<% case @user.administrator
+	when 0
+		admin_sel1 = 'selected'
+		admin_sel2 = ''
+		admin_sel3 = ''
+	when 1
+		admin_sel1 = ''
+		admin_sel2 = 'selected'
+		admin_sel3 = ''
+	when 2	
+		admin_sel1 = ''
+		admin_sel2 = ''	
+		admin_sel3 = 'selected'
+	else
+		admin_sel1 = 'selected'
+	end%>
+	
+<!--[form:user]-->
+ <fieldset>
+    <legend>
+        <b>Edit User</b>
+    </legend>
+     </fieldset>
+<!--[form:user]-->
+<div
+    id="dataDisplay"
+    style="clear:both">
+   <fieldset>
+	<table>
+		
+        <% if flash[:notice] -%>
+                <tr>
+                        <th>
+                            <font color="red">Message:</font>
+                        </th>
+                        <td colspan=3>
+                            <font color="red">
+                <%= flash[:notice] %>
+                            </font>
+
+                        </td>
+                 </tr>
+         <% end -%>
+
+<%= form_for @user do |u| %>
+<tr><th><%= u.label :username %></th><td><%= u.text_field :username %></td>
+<th><%= u.label :fullname %></th><td><%= u.text_field :fullname  %></td>
+</tr>
+<tr>
+	<th><%= u.label :administrator %></th>
+	<td><%= u.select(:administrator, [['Non Administrator', 0],['Administrator', 1],['TMC Access', 2]])%></td>
+	<th><%= u.label :email %></th><td><%= u.email_field :email, :value => edit_email3 %></td>
+</tr>
+<tr>
+<th><%= u.label :institution %></th><td><%= u.text_field :institution %></td>
+<th><%= u.label :password %></th><td><%= u.password_field :passwrd, :id=>'user_password' %></td>
+</tr>
+<%= u.submit 'Save' %> 
+<% end %>
+</table>
+</fieldset>
+</div>
+
+<!--[eoform:user]-->
+

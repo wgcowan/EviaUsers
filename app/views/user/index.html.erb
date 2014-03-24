@@ -1,0 +1,15 @@
+<h2>Search for users</h2>
+<%= form_tag("/user/search", method: "get") do %>
+
+<%= label_tag(:search_term, "Enter Search:")%>
+ 
+      <%= text_field_tag(:search_term)%>
+
+<%= check_box_tag(:show_act,:opt)%>Show Non-Activated Accounts Only?
+
+      <%= submit_tag("Search")%>
+
+ 	<% end %>
+ 
+<hr/>
+  <%= render partial: "list" %>
